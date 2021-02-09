@@ -1,0 +1,48 @@
+.search {
+  border-radius: 0.5rem;
+  box-shadow: 0px 4px 14px -7px;
+  padding: 1rem;
+  width: 100%;
+
+  &__inputs {
+    font-size: 1.1rem;
+    // Flex
+    display: flex;
+    align-items: center;
+  }
+
+  &__input {
+    width: 33.33%;
+    // Flex
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    input {
+      background-color: var(--background-color);
+      border: none;
+      color: var(--text-color);
+      outline: none;
+      transition: background 0.5s ease;
+      width: 90%;
+    }
+  }
+
+  &__full-time {
+    width: 33.33%;
+    // Flex
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &-check {
+      // Flex
+      display: flex;
+      align-items: center;
+
+      input {
+        margin-left: 0.5rem;
+      }
+    }
+  }
+}
