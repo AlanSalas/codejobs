@@ -5,5 +5,13 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 2.5rem 1.5rem;
+    margin-bottom: 3rem;
+  }
+
+  &__more {
+    // flex
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }

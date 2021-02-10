@@ -16,18 +16,12 @@
 
   &__company-logo {
     background-color: var(--background-color);
+    border-radius: 0.5rem;
     height: 3.5rem;
     width: 3.5rem;
     // Position
     position: absolute;
     top: -1rem;
-
-    img {
-      background-size: cover;
-      border-radius: 0.5rem;
-      height: 100%;
-      width: 100%;
-    }
   }
 
   &__time {
