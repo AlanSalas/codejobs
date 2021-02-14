@@ -3,7 +3,7 @@ import useTheme from "../hooks/useTheme";
 import Search from "./Search";
 import { HeartFilled } from "@ant-design/icons";
 
-function Header({ showSearch }) {
+function Header({ showSearch, handleSearch }) {
   const { handleToggle, theme } = useTheme();
 
   return (
@@ -23,7 +23,7 @@ function Header({ showSearch }) {
             {theme === "dark" ? "🌝" : "🌚"}
           </button>
         </div>
-        {showSearch && <Search />}
+        {showSearch && <Search handleSearch={handleSearch} />}
       </div>
     </div>
   );

@@ -1,0 +1,54 @@
+.job-card-skeleton {
+  background-color: var(--background-card-color);
+  border-radius: 0.5rem;
+  box-shadow: 0px 4px 14px -7px var(--text-color);
+  height: 15rem;
+  max-height: 15rem;
+  padding: 4rem 1rem 1rem 1rem;
+  transition: background 0.5s ease;
+  // Position
+  position: relative;
+  // Flex
+  display: flex;
+  flex-direction: column;
+
+  div {
+    animation: loading 1s infinite;
+    background-color: #ddd;
+    border-radius: 0.5rem;
+    height: 20%;
+    margin-bottom: 0.5rem;
+  }
+
+  div:nth-child(1) {
+    width: 85%;
+  }
+
+  div:nth-child(2) {
+    width: 60%;
+  }
+
+  div:nth-child(3) {
+    width: 40%;
+  }
+
+  &__company-logo {
+    animation: loading 1s infinite;
+    background-color: var(--background-skeleton-color);
+    border-radius: 0.5rem;
+    height: 3.5rem;
+    width: 3.5rem;
+    // Position
+    position: absolute;
+    top: -1rem;
+  }
+
+  @keyframes loading {
+    from {
+      background-color: var(--background-skeleton-color);
+    }
+    to {
+      background-color: var(--background-skeleton-color-transition);
+    }
+  }
+}

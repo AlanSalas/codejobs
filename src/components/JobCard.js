@@ -16,9 +16,7 @@ function JobCard({ job }) {
         <span>{job.type}</span>
       </p>
       <h3 className="job-card__title">{job.title}</h3>
-      <a className="job-card__company" href="#">
-        {job.company}
-      </a>
+      <p>{job.company}</p>
       <div className="job-card__cta">
         <p className="job-card__location">{job.location}</p>
         <Link to={`job/${job.id}`}>Apply Now</Link>

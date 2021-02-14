@@ -3,13 +3,15 @@ import Header from "../components/Header";
 import JobDetailTitle from "../components/JobDetailTitle";
 import JobDetailBody from "../components/JobDetailBody";
 import JobDetailApply from "../components/JobDetailApply";
+import Loading from "../components/Loading";
+import Error from "../components/Error";
 import { useParams } from "react-router-dom";
 import useFetch from "../hooks/useFetch";
 import moment from "moment";
 
 function JobDetail() {
   const { id } = useParams();
-  const { data: job } = useFetch(
+  const { data: job, loading, err } = useFetch(
     `https://api.allorigins.win/get?url=${encodeURIComponent(
       `https://jobs.github.com/positions/${id}.json`
     )}`
@@ -34,17 +36,31 @@ function JobDetail() {
   return (
     <div className="job-detail">
       <Header showSearch={false} />
-      <div className="container-detail">
-        <JobDetailTitle company={company} company_logo={company_logo} company_url={company_url} />
-        <JobDetailBody
-          timeAgo={timeAgo}
-          title={title}
-          location={location}
-          description={description}
-          type={type}
-        />
-        <JobDetailApply how_to_apply={how_to_apply} />
-      </div>
+      {loading ? (
+        <Loading />
+      ) : (
+        <>
+          {err ? (
+            <Error err={err} />
+          ) : (
+            <div className="container-detail">
+              <JobDetailTitle
+                company={company}
+                company_logo={company_logo}
+                company_url={company_url}
+              />
+              <JobDetailBody
+                timeAgo={timeAgo}
+                title={title}
+                location={location}
+                description={description}
+                type={type}
+              />
+              <JobDetailApply how_to_apply={how_to_apply} />
+            </div>
+          )}
+        </>
+      )}
     </div>
   );
 }

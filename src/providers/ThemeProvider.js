@@ -23,6 +23,7 @@ function ThemeProvider({ children }) {
 
   useEffect(() => {
     applyTheme();
+    // eslint-disable-next-line
   }, [theme]);
 
   return (
