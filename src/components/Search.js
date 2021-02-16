@@ -7,14 +7,14 @@ function Search({ handleSearch }) {
       <div className="search__inputs">
         <div className="search__input">
           <SearchOutlined />
-          <input type="text" id="inputDescription" placeholder="Search by any term" />
+          <input type="text" id="inputDescription" placeholder="Search by technology, company..." />
         </div>
         <div className="search__input">
           <EnvironmentOutlined />
           <input
             type="text"
             id="inputLocation"
-            placeholder="Search by city name, zip code, or other location"
+            placeholder="Search by city name, zip code, or other location..."
           />
         </div>
         <div className="search__full-time">

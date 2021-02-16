@@ -1,19 +1,18 @@
 import React from "react";
 
-function JobDetailTitle({ company, company_logo, company_url }) {
+function JobDetailTitle({ company, company_url }) {
   return (
     <div className="job-detail-title">
-      <div className="job-detail-title__img">
-        <img src={company_logo} alt={company} />
-      </div>
       <div className="job-detail-title__meta">
         <div className="job-detail-title__meta-company">
           <h2>{company}</h2>
-          <p>{company_url}</p>
+          {company_url ? <p>{company_url}</p> : null}
         </div>
-        <a href={company_url}>
-          <button>Company Site</button>
-        </a>
+        {company_url ? (
+          <a href={company_url}>
+            <button>Company Site</button>
+          </a>
+        ) : null}
       </div>
     </div>
   );

@@ -9,19 +9,27 @@
     // Flex
     display: flex;
     align-items: center;
+    @media (max-width: 780px) {
+      flex-direction: column;
+    }
   }
 
   &__input {
+    padding: 1rem;
     width: 33.33%;
     // Flex
     display: flex;
     align-items: center;
     justify-content: space-around;
+    @media (max-width: 780px) {
+      width: 100%;
+    }
 
     input {
       background-color: var(--background-color);
       border: none;
       color: var(--text-color);
+      margin-left: 0.5rem;
       outline: none;
       transition: background 0.5s ease;
       width: 90%;
@@ -29,11 +37,16 @@
   }
 
   &__full-time {
+    padding: 1rem;
     width: 33.33%;
     // Flex
     display: flex;
     align-items: center;
     justify-content: space-between;
+    @media (max-width: 780px) {
+      flex-direction: column;
+      width: 100%;
+    }
 
     &-check {
       // Flex
@@ -42,6 +55,9 @@
 
       input {
         margin-left: 0.5rem;
+      }
+      @media (max-width: 780px) {
+        margin-bottom: 1rem;
       }
     }
   }
