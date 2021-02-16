@@ -4,6 +4,7 @@ import Header from "../components/Header";
 import JobList from "../components/JobList";
 import useFetch from "../hooks/useFetch";
 import Error from "../components/Error";
+import ScrollTop from "../components/ScrollTop";
 
 function Home() {
   const [page, setPage] = useState(1);
@@ -55,6 +56,7 @@ function Home() {
           loading={loading}
         />
       )}
+      <ScrollTop />
     </div>
   );
 }
